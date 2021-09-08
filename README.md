@@ -1,6 +1,6 @@
 # project-2-repo
-### **Idea about the project --**
-##### Whenever we move goods or other items from one location to another, we require manpower. Many times, there isn't a single person available to buy goods for the house.
+### **Idea about the project **
+##### Whenever we move goods or other items from one location to another or we want any other daily basis service like Electrician, Plumber, Mechanic etc, we require manpower. Many times, there isn't a single person available to buy goods for the house.
 Then one can simply register and login to our Helper App platform and ask for assistance from other people who are available and willing to assist you in your immediate vicinity.
 We simply need to do the following: 
 * We require a platform for recruiting employees.
