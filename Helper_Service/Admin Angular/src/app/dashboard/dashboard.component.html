@@ -1,0 +1,532 @@
+<div class="sidenav" style="margin-top: 64px;">
+  <a mat-icon-button data-toggle="modal" (click)="getAllCustomers()" data-target="#customers">Customers</a>
+  <a mat-icon-button data-toggle="modal" (click)="getAllHelpers()" data-target="#helpers">Helpers</a>
+  <a mat-icon-button data-toggle="modal" data-target="#services">Services</a>
+  <a mat-icon-button data-toggle="modal" data-target="#admins">Admins</a>
+  <a mat-icon-button routerLink="/login">Home</a>
+</div>
+
+
+
+<!-- modal services  -->
+<div class="modal" id="services">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+
+        <img class="image-fluid text-center" style="width: 100px;" src="../../assets/model settings.png" alt="">
+        <h4 class="text-center" style="margin-left: 75px; margin-top: 40px; font-size: x-large;"><b>Our Services</b>
+        </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="container">
+        <p> Helpers app is a platform that helps customers book reliable and high quality services- appliance repair, painting, handymen, tutor and more - delivered by trained professionals conviniently at your location. Helpers' vision is to empower professionals to deliver services at home like never experienced before.  </p>
+        <p>Customers can login to their account and avail various services like- Electrician, Plumber, Builder, Carpenter, Tutor, Mechanic and others- at their location just by selecting the service they need and finding the deatils of the helpers. Also, the persons who are trained can register themselves to provide the services and be helper.</p>
+      </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- modal end  -->
+
+
+
+<!-- modal admins  -->
+<div class="modal" id="admins">
+  <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+
+        <img class="image-fluid text-center" style="width: 100px;" src="../../assets/team 3.png" alt="">
+        <h4 class="text-center" style="margin-left: 95px; margin-top: 40px; font-size: x-large;"><b>Team 3</b></h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <br>
+        <div class="container">
+
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="arjun"></div>
+              <mat-card-title>Arjun</mat-card-title>
+              <mat-card-subtitle>Full Stack</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../assets/admin/arjun.jpg">
+            <mat-card-content>
+              <p>
+                Admin Arjun is a Revature-trained full stack developer who is one of three members of Team 3 that created the Helpers App utilizing technologies such as Springboot and Angular.
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+        </div><br>
+        <hr class="my-4">
+
+        <div class="container">
+
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="rahul"></div>
+              <mat-card-title>Rahul</mat-card-title>
+              <mat-card-subtitle>Full Stack</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../assets/admin/rahul.jpg">
+            <mat-card-content>
+              <p>
+                Admin Rahul Ranjan is a full stack developer trained at Revature and is one of the three members of Team 3 who have developed Helpers App using technologies like Springboot, Angular.
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+        </div><br>
+        <hr class="my-4">
+
+        <div class="container">
+
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="afzaal"></div>
+              <mat-card-title>Afzaal</mat-card-title>
+              <mat-card-subtitle>Full Stack Developer</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../assets/admin/afzaal.jpg">
+            <mat-card-content>
+              <p>
+                Admin Afzaal Khan is a full stack developer trained at Revature and is one of the three members of Team 3 who have developed Helpers App using technologies like Springboot, Angular.
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+        </div><br>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- modal end  -->
+
+
+
+<!-- customers modal  -->
+<!-- large modal -->
+<div class="modal fade" id="customers">
+  <div class="modal-dialog modal-lg modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <img class="image-fluid text-center" style="width: 100px;" src="../../assets/user1.png" alt="">
+        <h4 class="text-center" style="margin-left: 200px; margin-top: 40px; font-size: x-large;"><b>Our Customers</b>
+        </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <br>
+        <table class='table table-striped table-bordered'>
+          <thead class='thead-dark text-center'>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>MOBILE</th>
+              <th>STATE</th>
+              <th>EDIT</th>
+              <th>DELETE</th>
+          </thead>
+          <tbody class="text-center">
+            <tr *ngFor="let cust of customer">
+              <td>{{cust.userid}}</td>
+              <td> {{cust.userName}} </td>
+              <td> {{cust.email}} </td>
+              <td> {{cust.mobile}} </td>
+              <td> {{cust.state}} </td>
+              <td>
+                <a mat-mini-fab color="primary" aria-label="Example icon button with a home icon" data-toggle="modal"
+                  data-target="#editCust" (click)="getcustidfromedit(cust.userid,cust.userPassword,cust.countryCode)">
+                  <mat-icon>create</mat-icon>
+                </a>
+              </td>
+              <td> <a mat-mini-fab color="warn" data-toggle="modal" data-target="#deletecust"
+                  (click)="getcustidfromedit(cust.userid,cust.countryCode,cust.userPassword)"
+                  aria-label="Example icon button with a home icon">
+                  <mat-icon>delete</mat-icon>
+                </a>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end modal  -->
+
+
+
+<!-- helpers modal  -->
+<!-- large modal -->
+<div class="modal fade" id="helpers">
+  <div class="modal-dialog modal-lg modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <img class="image-fluid text-center" style="width: 100px;" src="../../assets/helper1.png" alt="">
+        <h4 class="text-center" style="margin-left: 220px; margin-top: 40px; font-size: x-large;"><b>Our Helpers</b>
+        </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <br>
+        <table class='table table-striped table-bordered'>
+          <thead class='thead-dark text-center'>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>SERVICE TYPE</th>
+              <th>SERVICE LOCATION</th>
+              <th>AADHAR</th>
+              <th>DESCRIPTION</th>
+              <th>EDIT</th>
+              <th>DELETE</th>
+          </thead>
+          <tbody class="text-center">
+            <tr *ngFor="let help of helper">
+              <td>{{help.helperId}}</td>
+              <td> {{help.customer.userName}} </td>
+              <td> {{help.helperService}} </td>
+              <td> {{help.location}} </td>
+              <td> {{help.aadhar}} </td>
+              <td> {{help.description}} </td>
+              <td>
+                <a mat-mini-fab color="primary" aria-label="Example icon button with a home icon" data-toggle="modal"
+                  data-target="#editHelp" (click)="getcustidfromhelp(help.helperId,help.customer.userid)">
+                  <mat-icon>create</mat-icon>
+                </a>
+              </td>
+              <td> <a mat-mini-fab color="warn" aria-label="Example icon button with a home icon" data-toggle="modal"
+                  data-target="#deleteHelp" (click)="getcustidfromhelp(help.helperId,help.customer.userid)">
+                  <mat-icon>delete</mat-icon>
+                </a>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end modal  -->
+
+
+
+<!-- edit  customer modal  -->
+<div class="modal" id="editCust">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+
+        <img class="image-fluid text-center" style="width: 100px;" src="../../assets/login icon.png" alt="">
+        <h4 class="text-center" style="margin-left: 75px; margin-top: 40px; font-size: x-large;"><b>Edit Customer</b>
+        </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+
+          <mat-form-field class="full-width">
+            <mat-label>User Name</mat-label>
+            <input [(ngModel)]="custUpdate.userName" name="username" type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Email ID</mat-label>
+            <input [(ngModel)]="custUpdate.email" name="email" type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Mobile Number</mat-label>
+            <input [(ngModel)]="custUpdate.mobile" name="mobile" type="text" matInput required />
+          </mat-form-field>
+          <!-- <mat-form-field class="full-width">
+            <mat-label>State</mat-label>
+            <input [(ngModel)]="custUpdate.state" name="state" type="text" matInput required />
+          </mat-form-field> -->
+          <label for="locationSelector">Select State</label><br>
+          <select class="custom-select" [(ngModel)]="custUpdate.state" name="state" style="max-width: 320px;"
+            id="locationSelector">
+            <option selected="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger" (click)="updateCust()" data-dismiss="modal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal  -->
+
+
+<!-- delete customer  Modal -->
+<div class="modal fade" id="deletecust">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Delete Customer</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Are you sure to delete the customer details?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="deletecustCust()" data-dismiss="modal">Delete</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- edit  Helper modal  -->
+<div class="modal" id="editHelp">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+
+        <img class="image-fluid text-center" style="width: 100px;" src="../../assets/login icon.png" alt="">
+        <h4 class="text-center" style="margin-left: 75px; margin-top: 40px; font-size: x-large;"><b>Edit Helper</b>
+        </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+
+          <mat-form-field class="full-width">
+            <mat-label>aadhar</mat-label>
+            <input [(ngModel)]="helpUpdate.aadhar" name="aadhar" type="text" matInput required />
+          </mat-form-field>
+
+          <label for="serviceSelector">Select service Location</label><br>
+          <select class="custom-select" [(ngModel)]="helpUpdate.helperService" name="service" style="max-width: 320px;"
+            id="serviceSelector">
+            <option value="Electrician">Electrician</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Carpenter">Carpenter</option>
+            <option value="Mechanic">Mechanic</option>
+            <option value="Tutor">Tutor</option>
+            <option value="Builder">Builder</option>
+            <option value="Mason">Mason</option>
+            <option value="Other">Others...</option>
+          </select><br>
+
+          <label for="locationSelector">Select service Location</label><br>
+          <select class="custom-select" [(ngModel)]="helpUpdate.location" name="location" style="max-width: 320px;"
+            id="locationSelector">
+            <option selected="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+
+          <mat-form-field class="full-width">
+            <mat-label>About</mat-label>
+            <input [(ngModel)]="helpUpdate.description" name="decription" type="text" matInput required />
+          </mat-form-field>
+
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger" (click)="updateHelp()" data-dismiss="modal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal  -->
+
+<!-- delete Helper  Modal -->
+<div class="modal fade" id="deleteHelp">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Delete Helper</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Are you sure you want to delete the Helper?
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="deletecustHelp()" data-dismiss="modal">Delete</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- main  -->
+<div class="main text-center mt">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-6 offset-md-3"> -->
+      <div class="container text-center">
+        <div class="jumbotron">
+          <img class="image-fluid" style="width: 100px; margin-top: -40px;" src="../../assets/admin.png" alt="">
+          <h1 class="display-4" style="margin-top: 5px;">Welcome to the Admin Dashboard</h1>
+          <!-- <p class="lead">Subtitle</p> -->
+          <hr class="my-4">
+          <div class="container">
+
+          <p style="font-family: Arial, Helvetica, sans-serif; font-size: medium;">
+          
+          This is the Admin portal dashboard of Helpers App. On this page various options are provided on the left nav bar regarding Customers, Helpers, Our Services and Admin. The details of customers and helpers can be accesed by selecting the particular option and admin can alter as well as delete the details of customers and helpers. Our services option reveals the information about services that is provided by us. Details of Admin can be accessed by clicking the Admin option.
+
+          </p>
+                      
+        </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+<br><br>
+    <img class="image-fluid text-center" style="width: 100px;" src="../../assets/revature.png" alt="">
+    <p style="font-size: x-small; font-family: 'Courier New', Courier, monospace;">powered by</p>
+  <!-- </div>
+  <div class="spinner-grow text-muted"></div>
+  <div class="spinner-grow text-primary"></div>
+  <div class="spinner-grow text-success"></div>
+  <div class="spinner-grow text-info"></div>
+  <div class="spinner-grow text-warning"></div>
+  <div class="spinner-grow text-danger"></div>
+  <div class="spinner-grow text-secondary"></div>
+  <div class="spinner-grow text-dark"></div>
+  <div class="spinner-grow text-light"></div> -->
+
+</div>
+</div>
+                                      
+  

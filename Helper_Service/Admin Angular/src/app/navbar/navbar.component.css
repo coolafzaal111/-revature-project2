@@ -1,0 +1,14 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+    background: #1f2020;
+    color: #fff;
+  }
+
+  .mat-mini-fab.mat-primary{
+    background: #1f2020;
+    color: #fff;
+  }
+

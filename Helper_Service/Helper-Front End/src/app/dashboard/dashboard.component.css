@@ -1,0 +1,33 @@
+
+  /* Change the link color on hover */
+  a:hover {
+    background-color: #fad390;
+    color: #fff;
+  }
+  
+  .button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 16px;
+  }
+  
+    .mt{
+      margin-top: 0px;
+  }
+
+.text-center{
+    text-align: center;
+}
+.main {
+  margin-left: 210px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}

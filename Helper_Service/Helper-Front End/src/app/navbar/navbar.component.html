@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-top: -30px;">
+    <a class="navbar-brand" href="#"><strong>HeLpEr</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/homepage">Home</a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/service"><b>Services</b></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" routerLink="/contact"><b>Contact Us</b></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" routerLink="/about"><b>About</b></a>
+            </li>
+        </ul>   
+    
+       
+    </div>
+  
+<!--Dropdown Menu Top Right-->
+<div *ngIf="hide">
+<div class="pmd-dropdown dropup" style="margin-right: 40px;">
+  <button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenuTopRight" data-toggle="dropdown" aria-expanded="true">{{customers[0].userName}}</button>
+  <div class="dropdown-menu dropdown-menu-right">
+      <a class="dropdown-item" routerLink="/dashboard">Setting</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" (click)="logout()" >Logout</a>
+  </div>
+</div>
+</div>
+
+ 
+  </nav>
+  
+

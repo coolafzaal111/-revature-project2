@@ -1,0 +1,60 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(29, 31, 29);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f3e6e6;
+    display: block;
+    /* #818181; */
+  }
+  
+
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .example-card {
+    text-align: center;
+    margin-left: 18px;
+    max-width: 400px;
+  }
+  
+  .arjun {
+    background-image: url('../../assets/admin/arjun.jpg');
+    background-size: cover;
+  }
+  .rahul {
+    background-image: url('../../assets/admin/rahul.jpg');
+    background-size: cover;
+  }
+  .afzaal {
+    background-image: url('../../assets/admin/afzaal.jpg');
+    background-size: cover;
+  }
+
+
+
+  

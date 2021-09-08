@@ -1,0 +1,80 @@
+<div class="container">
+    
+    <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Register as A us</h4>
+        <p class="text-center">Get started with your free account</p>
+        <p>
+            <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+            <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+        </p>
+        <p class="divider-text">
+            <span class="bg-light">OR</span>
+        </p>
+        <form [formGroup]='myRegisterForm' (ngSubmit)="onSubmit()">
+        <div class="form-group input-group" style="margin-bottom: 20px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+             </div>
+            <input name="username" class="form-control" placeholder="Full name" type="text"  formControlName="username" >
+        </div> <!-- form-group// -->
+        <div class="form-group input-group" style="margin-bottom: 20px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+             </div>
+            <input name="email" class="form-control" placeholder="Email address" type="email"  formControlName="email">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group" style="margin-bottom: 20px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+            </div>
+            <select class="custom-select" style="max-width: 120px;" id="countrycode"  formControlName="countrycode">
+                <option selected="+91">+91</option>
+                <option value="+92">+92</option>
+                <option value="+93">+93</option>
+                <option value="+94">+94</option>
+            </select>
+            <input name="contact" class="form-control" placeholder="Phone number" type="text"  formControlName="contact">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group" style="margin-bottom: 20px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+            </div>
+            <select class="form-control" id="jobtype"  formControlName="jobtype">
+                <option selected=""> Select job type</option>
+                <option value="Electrician">Electrician</option>
+          <option value="Plumber">Plumber</option>
+          <option value="Carpenter">Carpenter</option>
+          <option value="Mechanic">Mechanic</option>
+          <option value="Tutor">Tutor</option>
+          <option value="Builder">Builder</option>
+          <option value="Mason">Mason</option>
+          <option value="Other">Others...</option>
+            </select>
+        </div> <!-- form-group end.// -->
+        <div class="form-group input-group" style="margin-bottom: 20px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Create password" type="password" id="password"  formControlName="password">
+        </div> <!-- form-group// -->
+        <!-- <div class="form-group input-group" style="margin-bottom: 20px;">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Repeat password" type="password">
+        </div> form-group//                                       -->
+        <div class="form-group" style="margin-bottom: 20px;">
+            <button type="submit" class="btn btn-primary btn-block" > Create Account  </button>
+        </div> <!-- form-group// -->     
+        <div class="form-group" style="margin-bottom:40px;margin-left:20px">
+    
+            If already Registered<a routerLink="/login">..Please Click here </a>
+        </div> <!-- form-group// -->      
+                                               
+    </form>
+    </article>
+    </div> <!-- card.// -->
+    
+    </div> 
+    <!--container end.//-->

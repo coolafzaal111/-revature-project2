@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <a routerLink="/home" mat-mini-fab aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+    </a>
+    <span style="margin-left: 8px;"><a>Admin</a></span>
+    <span class="example-spacer"></span>
+    <a mat-mini-fab *ngIf="!loggedIn" color="primary" routerLink="/login">Login</a>
+    <a *ngIf="loggedIn" (click)="logoutUser()" mat-mini-fab color="primary">Logout</a>
+
+</mat-toolbar>
